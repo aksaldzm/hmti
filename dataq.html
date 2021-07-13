@@ -1,0 +1,97 @@
+<?php include("config.php"); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>HMTI PNC</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/HMTI_KUNING.png" rel="icon">
+  <link href="img/HMTI_KUNING.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/venobox/venobox.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  </head>
+
+<body>
+
+<header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+        <a href="#intro" class="scrollto"><img src="img/HMTI_KUNING.png" alt="" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="index.html #intro">Home</a></li>
+          <li><a href="index.html #about">Tentang</a></li>
+          <li><a href="index.html #speakers">Kepengurusan</a></li>
+          <li><a href="index.html #schedule">Schedule</a></li>
+          <li><a href="index.html #gallery">Gallery</a></li>
+          <li><a href="index.html #contact">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+	  
+  </header>
+
+<section id="intro">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <div class="loginbox">
+        <table border="1">
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>Email</th>
+        <th>Subject</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody >
+      <?php 
+        $ambildata=mysqli_query($conect, "SELECT * FROM isi");
+        while($a=mysqli_fetch_array($ambildata)){
+          echo "<tr>"
+
+
+         <td>".$siswa['nm']."</td>;
+         <td>".$siswa['eml']."</td>;
+          <td>".$siswa['sbj']."</td>;
+          <td>".$siswa['msg']."</td>;
+          </tr>";
+
+        }
+      ?>
+    </tbody>
+  </table>
+  </div>
+  </section>
+
+  </body>
+
+</html>
+
+
+
+
